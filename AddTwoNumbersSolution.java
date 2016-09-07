@@ -6,11 +6,11 @@ public class AddTwoNumbersSolution {
         int node, len;
         int len1 = l1.size();
         int len2 = l2.size();
-        for(int i = 0; i < len1; i++){
+        for(int i = 0; i < len1-1; i++){//最后一次不用了
         	node = l1.removeLast();
         	l1.add(i, node);
         }
-        for(int j = 0; j < len2; j++){
+        for(int j = 0; j < len2-1; j++){
         	node = l2.removeLast();
         	l2.add(j, node);
         }
@@ -42,7 +42,7 @@ public class AddTwoNumbersSolution {
         }
         if(carry == 1)sumList.add(0, 1);
         
-        for(int k = 0; k < sumList.size(); k++){
+        for(int k = 0; k < sumList.size()-1; k++){
         	node = sumList.removeLast();
         	sumList.add(k, node);
         }
